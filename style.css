@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+#large-hide {
+  display: none;
+}
+#search {
+  font-size: 16px;
+}
+.body {
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0;
+  font-family: "Poppins", sans-serif;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-of-nav-link {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.list-of-nav-link > li > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.heading-2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+/* header content */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+.start-your-journey {
+  width: 50%;
+}
+.main-camera {
+  width: 40%;
+  background-image: url(images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image {
+  width: 100%;
+  transition: all 0.4s linear;
+}
+.image-2 {
+  width: 100%;
+}
+.image:hover {
+  scale: 1.05;
+}
+.heading-1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+}
+.common-para-1 {
+  max-width: 50ch;
+  padding: 20px 0;
+  color: rgba(58, 58, 58, 0.831);
+  font-weight: 500;
+}
+.btn {
+  position: relative;
+  padding: 10px 30px;
+  border-radius: 999px;
+  border: none;
+  background-color: rgb(224, 44, 109);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(rgba(128, 98, 0, 0.765), rgba(0, 66, 94, 0.792));
+  transition: width 0.4s linear;
+  border-radius: inherit;
+  z-index: -1;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+/* icons section */
+.icons-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.icon-div {
+  width: 100px;
+  height: 40px;
+}
+.icon {
+  height: 100%;
+  width: 100%;
+}
+
+/* card design */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.card {
+  /* border: 2px solid; */
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.573);
+}
+.heading-3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.common-para-2 {
+  /* border: 2px solid red; */
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 30ch;
+  color: rgba(58, 58, 58, 0.74);
+}
+/* featured section */
+.featured-section {
+  display: flex;
+  justify-content: space-between;
+}
+/* media query section design */
+@media screen and (max-width: 576px) {
+  .body {
+    width: 90%;
+    padding: 20px 0;
+  }
+  #large-hide {
+    display: inline;
+    font-size: 18px;
+  }
+  #small-hide {
+    display: none;
+  }
+  #search {
+    font-size: 18px;
+  }
+  .large {
+    display: none;
+  }
+  .list-of-nav-link {
+    width: 40px;
+    justify-content: end;
+  }
+  /* header content */
+  .header-content {
+    flex-direction: column-reverse;
+  }
+  .start-your-journey {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-camera {
+    width: 80%;
+    background-size: cover;
+  }
+  .image {
+    width: 100%;
+  }
+  .heading-1 {
+    padding-top: 20px;
+    font-size: 32px;
+    line-height: 44px;
+    color: rgba(0, 0, 0, 0.799);
+  }
+  .common-para-1 {
+    padding: 16px 0;
+  }
+  /* icons section */
+  .icons-section {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+  }
+  .icon-div {
+    width: 80px;
+    height: 40px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  /* card design */
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.573);
+    width: 100%;
+  }
+  /* featured section */
+  .featured-section {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .common-para-1 {
+    max-width: 34ch;
+    text-align: center;
+  }
+}
